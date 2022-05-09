@@ -28,3 +28,25 @@ class Solution {
         return prev;
     }
 }
+
+
+// Doubly Linked lIst:
+public static Node reverseDLL(Node  head)
+{
+   if(head == null)
+            return head;
+        Node reverse = null;
+       
+        
+        while(head!=null){
+            Node temp = head.next;
+            head.next = reverse;
+            reverse=head;
+            reverse.prev=temp;
+            head=temp;
+            
+        }
+        
+        return reverse;
+    
+}
